@@ -1,4 +1,4 @@
-package `leet-code`
+package leetcode
 
 class TwoSum {
     fun twoSum(nums: IntArray, target: Int): IntArray {
