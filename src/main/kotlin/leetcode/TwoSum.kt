@@ -3,7 +3,7 @@ package leetcode
 class TwoSum {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val result = IntArray(2)
-        for (i in 0 until nums.size) {
+        for (i in nums.indices) {
             val first = nums[i]
             val lookup = target - first
             for (j in i+1 until nums.size) {
