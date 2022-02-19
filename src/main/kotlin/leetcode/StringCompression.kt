@@ -32,7 +32,8 @@ class StringCompression {
     }
 }
 
-fun main(args: Array<String>) {
+
+fun main() {
     val input = charArrayOf('A')
     println(StringCompression().compress(input))
 }
