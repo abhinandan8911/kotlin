@@ -31,3 +31,8 @@ class StringCompression {
         return result.size
     }
 }
+
+fun main(args: Array<String>) {
+    val input = charArrayOf('A')
+    println(StringCompression().compress(input))
+}
