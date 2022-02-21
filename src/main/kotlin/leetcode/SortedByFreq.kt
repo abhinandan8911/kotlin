@@ -6,7 +6,7 @@ class SortedByFreq {
         for(ch in s.toCharArray()) {
             mapChars[ch] = mapChars.getOrDefault(ch, 0) + 1
         }
-        val entries = mapChars.entries.asSequence()
+        val entries = mapChars.entries
             .sortedByDescending { it.value }
             .toList()
         val strBuilder = StringBuilder()
