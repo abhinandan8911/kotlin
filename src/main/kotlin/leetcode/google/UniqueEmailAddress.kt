@@ -6,8 +6,8 @@ class UniqueEmailAddress {
         val emailSet = mutableSetOf<String>()
         for (email in emails) {
             val emailPart = email.split("@")
-            val local = emailPart.get(0)
-            val domain = emailPart.get(1)
+            val local = emailPart[0]
+            val domain = emailPart[1]
             var parsedLocal = local.replace(".", "")
             parsedLocal = parsedLocal.substringBefore('+')
             emailSet.add("$parsedLocal@$domain")
@@ -17,6 +17,7 @@ class UniqueEmailAddress {
 }
 
 fun main() {
-    val strings = arrayOf("test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com")
+    val strings =
+        arrayOf("test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com")
     println(UniqueEmailAddress().numUniqueEmails(strings))
 }
