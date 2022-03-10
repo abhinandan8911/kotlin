@@ -1,5 +1,6 @@
 package leetcode
 
+// https://leetcode.com/explore/interview/card/bloomberg/68/array-and-strings/2920/
 class LongestSubstring {
     fun lengthOfLongestSubstring(s: String): Int {
         val charValue = s.toCharArray()
@@ -13,8 +14,7 @@ class LongestSubstring {
                 if (!setOfChars.contains(charValue[j])) {
                     setOfChars.add(charValue[j])
                     j++
-                }
-                else {
+                } else {
                     break
                 }
             }
